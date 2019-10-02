@@ -1,0 +1,80 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+   background: #111;
+   font-family: arial;
+ }
+ 
+ .welcome {
+   border-radius: 5px;
+   background: #fff;
+   width: 280px;
+   text-align: center;
+   position: absolute;
+   z-index: 99;
+   left: 50%;
+   top: 50%;
+   padding: 3rem;
+   transform: translate(-50%, -50%);
+ }
+   .welcome div {
+      font-size: 1.2rem;
+      margin-bottom: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: .2rem;
+   }
+
+   .welcome button {
+      background: #da4a3f;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: .8rem;
+      letter-spacing: .2rem;
+      padding: 1rem 2rem;
+      outline: 0;
+   }
+ 
+ .game {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+   grid-gap: 15px;
+   height: 100vh;
+   align-items: middle;
+ }
+
+   .game div {
+      align-items: center;
+      background: #27272b;
+      color: #fff;
+      font-size: 3rem;
+      font-weight: 700;
+      display: grid;
+      text-align: center;
+      line-height: 0;
+      border-radius: 6px;
+      transform: rotateY(-180deg);
+      transition: all .4s;
+   }
+
+   .game div.selected {
+      background: #da4a3f;
+      transform: rotateY(0deg);
+   }
+   
+   .game div.hidden {
+      visibility: hidden;
+   }
+ 
+ @media (max-width: 600px) {
+   .game {
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-gap: 10px;
+   }
+   .game div {
+      font-size: 2rem;
+    }
+ }
