@@ -1,0 +1,28 @@
+{
+  "name": "memory-code",
+  "version": "1.0.0",
+  "description": "Game",
+  "main": "src/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.6.3",
+    "@babel/core": "^7.6.3",
+    "@babel/preset-env": "^7.6.3"
+  },
+  "scripts": {
+    "build": "babel src -d lib --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yersoncp/memory-code-js.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "@yersoncp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yersoncp/memory-code-js/issues"
+  },
+  "homepage": "https://github.com/yersoncp/memory-code-js#readme"
+}
