@@ -10,7 +10,7 @@ body {
  .welcome {
    border-radius: 5px;
    background: #fff;
-   width: 280px;
+   width: 240px;
    text-align: center;
    position: absolute;
    z-index: 99;
@@ -36,14 +36,40 @@ body {
       letter-spacing: .2rem;
       padding: 1rem 2rem;
       outline: 0;
+      cursor: pointer;
+      transition: all .3s;
    }
+   .welcome button:hover {
+     background: #b63d35;
+   }
+   .welcome button[disabled] {
+     background: #ccc;
+     cursor: default;
+   }
+
+   .welcome .link {
+     display: block;
+     padding-top: 20px;
+     color: #666;
+     text-transform: uppercase;
+     font-size: 12px;
+     cursor: pointer;
+   }
+   .welcome .link:hover {
+    color: #000;
+  }
  
  .game {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr 1fr;
-   grid-gap: 15px;
-   height: 100vh;
+   grid-gap: 20px;
+   padding: 40px;
+   height: calc(100vh - 80px);
    align-items: middle;
+ }
+
+ .game.type-2 {
+    grid-template-columns: 1fr 1fr;
  }
 
    .game div {
@@ -57,7 +83,8 @@ body {
       line-height: 0;
       border-radius: 6px;
       transform: rotateY(-180deg);
-      transition: all .4s;
+      transition: all .5s;
+      opacity: 1;
    }
 
    .game div.selected {
@@ -66,13 +93,16 @@ body {
    }
    
    .game div.hidden {
-      visibility: hidden;
+      opacity: 0;
+      background: #0497c4;
    }
  
  @media (max-width: 600px) {
    .game {
      grid-template-columns: 1fr 1fr 1fr;
      grid-gap: 10px;
+     padding: 20px;
+     height: calc(100vh - 40px);
    }
    .game div {
       font-size: 2rem;
